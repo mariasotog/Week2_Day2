@@ -1,6 +1,6 @@
+from random import choice
 
 # Soldier
-
 
 class Soldier:
     
@@ -15,7 +15,6 @@ class Soldier:
         self.health = self.health - damage
 
 # Viking
-
 
 class Viking(Soldier):
     
@@ -52,3 +51,21 @@ class War:
     def __init__(self):
         self.vikingArmy = []
         self.saxonArmy = []
+    
+    def addViking(self, viking):
+        self.vikingArmy.append(viking)
+        return None
+
+    def addSaxon(self, saxon):
+        self.saxonArmy.append(saxon)
+        return None
+    
+    def vikingAttack(self):
+        saxon = choice(self.saxonArmy)
+        viking = choice(self.vikingArmy)
+        ataque = saxon.receiveDamage(viking.strength)
+        if saxon.health <= 0:
+            self.saxonArmy.remove(saxon)
+        else:
+            pass
+        return ataque
