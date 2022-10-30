@@ -1,6 +1,6 @@
 import unittest
 from vikingsClasses import War, Viking, Saxon
-from inspect import signature
+#from inspect import signature
 
 
 class TestWar(unittest.TestCase):
