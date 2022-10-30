@@ -69,3 +69,13 @@ class War:
         else:
             pass
         return ataque
+
+    def saxonAttack(self):
+        viking = choice(self.vikingArmy)
+        saxon = choice(self.saxonArmy)
+        ataque = viking.receiveDamage(saxon.strength)
+        if viking.health <= 0:
+            self.vikingArmy.remove(viking)
+        else:
+            pass
+        return ataque
