@@ -30,6 +30,9 @@ class Viking(Soldier):
         else:
             return "{} has received {} points of damage".format(self.name, damage)
 
+    def battleCry(self):
+        return "Odin Owns You All!"
+
 # Saxon
 
 
