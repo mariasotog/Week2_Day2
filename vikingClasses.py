@@ -79,3 +79,11 @@ class War:
         else:
             pass
         return ataque
+
+    def showStatus(self):
+        if self.saxonArmy == []:
+            return "Vikings have won the war of the century!"  
+        elif self.vikingArmy == []:
+            return "Saxons have fought for their lives and survive another day..."    
+        else:
+            return "Vikings and Saxons are still in the thick of battle."
